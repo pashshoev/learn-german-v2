@@ -84,7 +84,8 @@ app/
 │   └── lesson_card.py     # Lesson card UI component
 ├── constants/
 │   ├── __init__.py
-│   └── text.py           # UI text constants for multi-language support
+│   ├── text.py           # UI text constants for multi-language support
+│   └── colors.py         # Color constants for consistent app styling
 └── data/
     └── dummy/
         └── lessons.csv    # Sample lesson data
