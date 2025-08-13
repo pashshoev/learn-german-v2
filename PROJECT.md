@@ -1,18 +1,18 @@
 # Uzbek → German Learning App
 
-A web application for learning the German language based on the Listvin book (“Complete German Course”), with the Russian part translated into Uzbek.  
+A web application for learning the German language based on the Listvin book ("Complete German Course"), with the Russian part translated into Uzbek.  
 UI and gamification inspired by Duolingo, but with richer content and more exercise variety.
 
 ---
 
 ## 1. Project Overview
 The goal is to combine the structured grammar and exercise-rich format of the Listvin book with the interactive, gamified style of Duolingo.  
-Content will be stored in a CSV format for easy editing and later migration to a database.
+Content is stored in CSV format for easy editing and later migration to a database.
 
 ---
 
 ## 2. Goals
-- Use the book’s structure (35 lessons, each with vocabulary, grammar, exercises, and texts).
+- Use the book's structure (35 lessons, each with vocabulary, grammar, exercises, and texts).
 - Roadmap-style interface: list of lessons → inside each lesson, sequential steps (vocabulary, grammar, exercises, text).
 - Preserve the variety of exercises (5–10 types).
 - Modular architecture for easy extension (adding new lessons, exercise types, features).
@@ -48,7 +48,7 @@ Content will be stored in a CSV format for easy editing and later migration to a
 ## 5. UI Logic
 
 **Main Page:**
-- Roadmap of 35 lessons (with visible progress)
+- Roadmap of lessons (with visible progress)
 - Click on a lesson → opens lesson detail page
 
 **Lesson Page:**
@@ -67,44 +67,63 @@ Content will be stored in a CSV format for easy editing and later migration to a
 
 ---
 
-## 6. Code Structure
+## 6. Code Structure (IMPLEMENTED)
+
 ```text
 app/
-├── main.py
-├── ui/
-│   ├── roadmap.py
-│   ├── lesson_view.py
-│   └── exercise_view.py
-├── api/
-│   ├── lessons.py
-│   └── progress.py
-├── data/
-│   ├── lessons.csv
-│   └── ...
+├── main.py                 # Main application entry point
 ├── models/
+│   ├── __init__.py
+│   └── lesson.py          # Lesson data model with progress tracking
 ├── services/
-└── utils/
+│   ├── __init__.py
+│   └── lesson_service.py  # CSV loading and data processing
+├── ui/
+│   ├── __init__.py
+│   ├── components.py      # Reusable UI components (Header, Button, Card, Progress)
+│   └── lesson_card.py     # Lesson card UI component
+├── constants/
+│   ├── __init__.py
+│   └── text.py           # UI text constants for multi-language support
+└── data/
+    └── dummy/
+        └── lessons.csv    # Sample lesson data
+```
+
+**Key Features:**
+- **Modular Architecture**: Clean separation of concerns
+- **Reusable Components**: Consistent UI styling across the app
+- **Data-Driven**: Lessons loaded from CSV files
+- **Type Safety**: Proper Python typing and dataclasses
+- **Mobile-Friendly**: Responsive single-column layout
 
 ---
 
 ## 7. Development Stages
 
-### MVP (1–2 months)
-1. Create CSV template for storing content
-2. Load CSV → Python objects (`Lesson`, `Exercise`)
-3. FastAPI endpoints:
+### ✅ COMPLETED (MVP Core)
+1. ✅ Create CSV template for storing content
+2. ✅ Load CSV → Python objects (`Lesson`, `Exercise`)
+3. ✅ NiceGUI roadmap interface
+4. ✅ Modular UI components
+5. ✅ Progress tracking display
+6. ✅ Mobile-responsive design
+
+### 🚧 IN PROGRESS
+7. FastAPI endpoints:
    - `/lessons` — list of lessons
    - `/lesson/{id}` — lesson content
    - `/check_answer` — answer checking
-4. NiceGUI:
-   - Roadmap screen
-   - Lesson detail page with sequential steps
-   - 2 exercise types (translation & fill-in-the-blank)
-5. Store progress in SQLite
-6. Deploy MVP
 
-### Extensions
-7. Add new exercise types
-8. Add XP counters & streaks
-9. Admin panel for uploading new CSVs
-10. Migrate to PostgreSQL
+### 📋 NEXT STEPS
+8. Lesson detail page with sequential steps
+9. Exercise types (translation & fill-in-the-blank)
+10. Store progress in SQLite
+11. Deploy MVP
+
+### 🔮 FUTURE EXTENSIONS
+12. Add new exercise types
+13. Add XP counters & streaks
+14. Admin panel for uploading new CSVs
+15. Migrate to PostgreSQL
+16. Multi-language UI support (Uzbek/English)
