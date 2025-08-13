@@ -24,8 +24,9 @@ class Button:
     @staticmethod
     def primary(text: str, on_click=None, **kwargs):
         """Primary button with full width and consistent styling."""
-        classes = 'w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded'
-        return ui.button(text, on_click=on_click, **kwargs).classes(classes)
+        button = ui.button(text, on_click=on_click, **kwargs)
+        button.classes('!bg-green-500 hover:!bg-green-600 text-white font-medium py-2 px-4 rounded mx-auto')
+        return button
     
     @staticmethod
     def secondary(text: str, on_click=None, **kwargs):
