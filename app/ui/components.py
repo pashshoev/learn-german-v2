@@ -1,4 +1,5 @@
 from nicegui import ui
+from constants.colors import Colors
 
 class Header:
     """Reusable header component with consistent styling."""
@@ -25,13 +26,13 @@ class Button:
     def primary(text: str, on_click=None, **kwargs):
         """Primary button with full width and consistent styling."""
         button = ui.button(text, on_click=on_click, **kwargs)
-        button.classes('!bg-green-500 hover:!bg-green-600 text-white font-medium py-2 px-4 rounded mx-auto')
+        button.classes(f'!bg-{Colors.PRIMARY} hover:!bg-{Colors.PRIMARY_HOVER} {Colors.TEXT_PRIMARY} font-medium py-2 px-4 rounded mx-auto')
         return button
     
     @staticmethod
     def secondary(text: str, on_click=None, **kwargs):
         """Secondary button with outline style."""
-        classes = 'w-full border border-gray-300 hover:bg-gray-50 text-gray-700 font-medium py-2 px-4 rounded'
+        classes = f'w-full border border-{Colors.BG_BORDER} hover:bg-{Colors.BG_SECONDARY} text-gray-700 font-medium py-2 px-4 rounded'
         return ui.button(text, on_click=on_click, **kwargs).classes(classes)
 
 class Card:
@@ -68,4 +69,4 @@ class Progress:
     @staticmethod
     def bar(value: int):
         """Progress bar with consistent styling."""
-        return ui.linear_progress(value / 100).classes('w-full mb-4')
+        return ui.linear_progress(value / 100, color=Colors.PRIMARY).classes(f'w-full mb-4')
