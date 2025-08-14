@@ -2,17 +2,17 @@ class Text:
     """UI text constants supporting multiple languages."""
     
     # App headers
-    APP_TITLE = "🇩🇪 Learn German"
-    ROADMAP_SUBTITLE = "Complete German Course - Roadmap"
+    APP_TITLE = "🇩🇪 Nemischa urganamiz"
+    ROADMAP_SUBTITLE = "To'liq nemis tili kursi"
     
     # Button labels
-    START_LESSON = "Start Lesson"
-    
+    START_LESSON = "Darsni boshlash"
+    BACK_TO_LESSONS = "Darslarga qaytish"
     # Progress labels
-    PROGRESS_LABEL = "Progress:"
+    PROGRESS_LABEL = "Progres:"
     
     # Notifications
-    LESSON_STARTING = "Starting {}"
+    LESSON_STARTING = "Darsni boshlash {}"
     
     # Placeholder for future language support
     # def __init__(self, language="en"):

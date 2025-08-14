@@ -1,0 +1,22 @@
+[
+    {
+    "exercise_id": 1,
+    "type": "translation",
+    "description": "Translate these sentences into Uzbek.",
+    "example": "Ich esse einen Apfel → Men olma yeyapman",
+    "samples": [
+        { "question": "Er liest ein Buch", "answer": "U kitob o‘qiyapti" },
+        { "question": "Wir trinken Wasser", "answer": "Biz suv ichyapmiz" }
+    ]
+    },
+    {
+    "exercise_id": 2,
+    "type": "translation",
+    "description": "Translate these sentences into Uzbek.",
+    "example": "",
+    "samples": [
+        { "question": "Ich gehe zum Markt", "answer": "Men bozorga boraman" }
+    ]
+    }
+]
+  

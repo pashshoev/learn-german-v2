@@ -1,0 +1,10 @@
+{
+    "lesson_id": 1,
+    "title": "Introduction and Basic Vocabulary",
+    "sequence": [
+      { "type": "vocabulary", "id": 0 },
+      { "type": "exercise", "id": 0 },
+      { "type": "exercise", "id": 1 },
+      { "type": "vocabulary", "id": 1 }
+    ]
+  }

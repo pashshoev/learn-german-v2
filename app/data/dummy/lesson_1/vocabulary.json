@@ -1,0 +1,18 @@
+[
+    {
+      "group_id": 1,
+      "title": "Basic Fruits",
+      "samples": [
+        ["der Apfel", "die Äpfel", "olma", "olmalar", null, null],
+        ["die Banane", "die Bananen", "banan", "bananlar", null, null]
+      ]
+    },
+    {
+      "group_id": 2,
+      "title": "Vegetables",
+      "samples": [
+        ["die Karotte", "die Karotten", "sabbat", "sabbatlar", null, null]
+      ]
+    }
+  ]
+  

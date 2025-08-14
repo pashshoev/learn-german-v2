@@ -1,5 +1,5 @@
 id,title,description,order,is_completed,progress
-1,Lesson 1: Basic Greetings,Learn basic German greetings and introductions,1,false,25
-2,Lesson 2: Numbers 1-10,Count from 1 to 10 in German,2,false,0
-3,Lesson 3: Family Members,Learn family member vocabulary in German,3,false,0
-4,Lesson 4: Colors and Shapes,Master German colors and basic shapes,4,false,0
+1,Basic Greetings,Learn basic German greetings and introductions,1,false,25
+2,Numbers 1-10,Count from 1 to 10 in German,2,false,0
+3,Family Members,Learn family member vocabulary in German,3,false,0
+4,Colors and Shapes,Master German colors and basic shapes,4,false,0

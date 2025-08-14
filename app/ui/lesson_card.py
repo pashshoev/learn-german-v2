@@ -6,7 +6,8 @@ from ui.components import Card, Progress, Button
 def create_lesson_card(lesson: Lesson):
     """Creates a lesson card UI component."""
     with Card.container():
-        Card.title(lesson.title)
+        id_title = f'{lesson.id}. {lesson.title}'
+        Card.title(id_title)
         Card.description(lesson.description)
         
         # Progress bar
@@ -15,4 +16,4 @@ def create_lesson_card(lesson: Lesson):
             Progress.percentage(lesson.progress)
         Progress.bar(lesson.progress)
         
-        Button.primary(Text.START_LESSON, on_click=lambda: ui.notify(Text.LESSON_STARTING.format(lesson.title)))
+        Button.primary(Text.START_LESSON, on_click=lambda: ui.navigate.to(f'/lesson/{lesson.id}'))
